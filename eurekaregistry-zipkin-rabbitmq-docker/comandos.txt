@@ -1,0 +1,5 @@
+docker run -p 9411:9411 openzipkin/zipkin:2.23.2
+http://127.0.0.1:9411/zipkin/
+
+docker run -p 8761:8761 kleitonarufino/naming-server:0.0.1-SNAPSHOT
+spring-boot:build-image -DskipTests	
