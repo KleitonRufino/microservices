@@ -11,12 +11,28 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
-@EnableRabbit
+//@EnableRabbit
 @EnableCaching
 @EnableEurekaClient
-@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+//@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+@SpringBootApplication
 public class CadastroApplication {
 
+	/**
+	 * 
+	 * http://localhost:8080/cadastro/client/save
+	 * POST { "name":"jose2", "email": "jose2@email.com", "user":"jose2", "password": "12345" }
+	 * HEADER AUTENTICACAO TOKEN
+	 * 
+	 * http://localhost:8090/cadastro/restaurant/save
+	 * POST { "name":"restaurante", "email": "restaurante@email.com", "user":"restaurante", "password": "12345" }
+	 * HEADER AUTENTICACAO TOKEN
+	 * 
+	 * http://localhost:8090/cadastro/menu/save
+	 * POST { "name":"restaurante", "price": 10, "idRestaurant": 9 }
+	 * HEADER AUTENTICACAO TOKEN
+	 * 
+	 * */
 	public static void main(String[] args) {
 		SpringApplication.run(CadastroApplication.class, args);
 	}

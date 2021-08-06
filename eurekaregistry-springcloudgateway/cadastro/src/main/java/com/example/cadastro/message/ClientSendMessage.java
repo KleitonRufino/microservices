@@ -16,6 +16,9 @@ public class ClientSendMessage {
     @Value("${cadastro.client.rabbitmq.routingkey}")
     private String routingkey;
 
+    @Value("${cadastro.client.rabbitmq.routingkey}")
+    private String queue;
+    
     private final RabbitTemplate rabbitTemplate;
 
     @Autowired
@@ -27,7 +30,7 @@ public class ClientSendMessage {
         System.out.println(client);
         System.out.println(exchange);
         System.out.println(routingkey);
-        rabbitTemplate.convertAndSend(exchange, routingkey, client);
+        rabbitTemplate.convertAndSend(exchange, queue, client);
     }
 
 }
