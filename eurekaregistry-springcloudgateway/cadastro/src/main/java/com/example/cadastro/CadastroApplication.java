@@ -19,6 +19,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CadastroApplication {
 
 	/**
+	 * AUTHORIZATION 
+	 * POST http://localhost:8093/authentication/login { "username":"admin", "password": "pwd" }
 	 * 
 	 * http://localhost:8080/cadastro/client/save
 	 * POST { "name":"jose2", "email": "jose2@email.com", "user":"jose2", "password": "12345" }

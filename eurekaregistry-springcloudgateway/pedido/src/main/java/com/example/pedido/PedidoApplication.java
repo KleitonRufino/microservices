@@ -12,6 +12,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class PedidoApplication {
 
 	/**
+	 * AUTHORIZATION 
+	 * POST http://localhost:8093/authentication/login { "username":"admin", "password": "pwd" }
+	 * 
 	 * http://localhost:8091/pedido/order/save
 	 * POST { "idMenu": 18, "idClient": 16, "idRestaurant": 17, "price": 12345 }
 	 * HEADER AUTENTICACAO TOKEN
